@@ -1,0 +1,14 @@
+---
+files:
+  - source: /
+    destination: /home/ubuntu/geneuse
+    file_exists_behavior: OVERWRITE
+    overwrite: true
+file_exists_behavior: OVERWRITE
+hooks:
+  ApplicationStart:
+    - location: codedeploy/app/run.sh
+      timeout: 600
+
+os: linux
+version: 0.0
